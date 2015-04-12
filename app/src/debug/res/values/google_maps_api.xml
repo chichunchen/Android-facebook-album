@@ -1,18 +1,5 @@
 <resources>
-    <!--
-    TODO: Before you run your application, you need a Google Maps API key.
-
-    To get one, follow this link, follow the directions and press "Create" at the end:
-
-https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=55:F6:36:98:4D:EB:49:20:7D:C6:A8:A1:1D:D7:88:8C:F0:02:EE:95%3Bcom.project.android.nctu.facebook_googlemap_album
-
-    You can also add your credentials to an existing key, using this line:
-    55:F6:36:98:4D:EB:49:20:7D:C6:A8:A1:1D:D7:88:8C:F0:02:EE:95;com.project.android.nctu.facebook_googlemap_album
-
-    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
-    string in this file.
-    -->
     <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">
-        YOUR_KEY_HERE
+        AIzaSyBCyDfUw_SVXm_u-ZFA4RfmRBodQsqn_3I
     </string>
 </resources>
