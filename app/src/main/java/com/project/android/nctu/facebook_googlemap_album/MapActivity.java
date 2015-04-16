@@ -19,6 +19,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class MapActivity extends Activity implements OnMapReadyCallback {
 
@@ -66,8 +68,12 @@ public class MapActivity extends Activity implements OnMapReadyCallback {
     }
 
     private void dispatchTakePictureIntent() {
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String strDate = sdf.format(c.getTime());
+
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        File tmpFile = new File(Environment.getExternalStorageDirectory(),"image.jpg");
+        File tmpFile = new File(Environment.getExternalStorageDirectory(),"Pictures/fbcheckin" + strDate + ".jpg");
         Uri outputFileUri = Uri.fromFile(tmpFile);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
         startActivityForResult(intent, 0);
