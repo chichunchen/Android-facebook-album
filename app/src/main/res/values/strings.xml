@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">Facebook-GoogleMap-Album</string>
+    <string name="action_settings">Setting</string>
+
     <string name="map_search">輸入地名</string>
     <string name="map_search_text">搜尋</string>
     <string name="title_activity_maps">Google map checkin album</string>
+
     <string name="facebook_app_id">383271738525917</string>
     <string name="update_status">Update Status</string>
     <string name="post_image">Post Image</string>
