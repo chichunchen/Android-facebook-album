@@ -6,6 +6,6 @@
     <string name="facebook_app_id">383271738525917</string>
     <string name="update_status">Update Status</string>
     <string name="post_image">Post Image</string>
-    <string name="album">相簿</string>
+    <string name="album">拍照</string>
     <string name="share">分享</string>
 </resources>

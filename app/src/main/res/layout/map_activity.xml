@@ -27,13 +27,13 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_weight="1"
-            android:onClick="takePhoto"></Button>
+            android:onClick="takePhoto" />
         <Button
             android:text="@string/share"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_weight="1"
-            android:onClick="shareInfo"></Button>
+            android:onClick="shareInfo" />
     </LinearLayout>
 
 </RelativeLayout>
