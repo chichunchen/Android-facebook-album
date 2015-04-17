@@ -20,12 +20,12 @@ import android.widget.Toast;
 import java.io.File;
 
 
-public class WebViewActivity extends ActionBarActivity {
+public class CheckinActivity extends ActionBarActivity {
 
     private WebView webView;
     private String urlStart = "http://140.113.122.162:3000/";
 
-    //File choser parameters
+    //File chooser parameters
     private static final int FILECHOOSER_RESULTCODE = 2888;
     private ValueCallback<Uri> mUploadMessage;
 
@@ -46,6 +46,61 @@ public class WebViewActivity extends ActionBarActivity {
 
         webView.loadUrl(urlStart);
 
+        setChromeClient();
+        setViewClient();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        if (requestCode == FILECHOOSER_RESULTCODE) {
+
+            if (null == this.mUploadMessage) {
+                return;
+            }
+
+            Uri result = null;
+
+            try {
+                if (resultCode != RESULT_OK) {
+
+                    result = null;
+
+                } else {
+                    // retrieve from the private variable if the intent is null
+                    result = intent == null ? mCapturedImageURI : intent.getData();
+                }
+            } catch (Exception e) {
+                Toast.makeText(getApplicationContext(), "activity :" + e, Toast.LENGTH_LONG).show();
+            }
+
+            mUploadMessage.onReceiveValue(result);
+            mUploadMessage = null;
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_web_view, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void setChromeClient() {
         webView.setWebChromeClient(new WebChromeClient() {
             // openFileChooser for Android 3.0+
             public void openFileChooser(ValueCallback<Uri> uploadMsg, String acceptType) {
@@ -96,11 +151,13 @@ public class WebViewActivity extends ActionBarActivity {
                 return true;
             }
         });
+    }
 
+    public void setViewClient() {
         webView.setWebViewClient(new WebViewClient() {
             ProgressDialog progressDialog;
 
-            //If you will not use this method url links are opeen in new brower not in webview
+            //If you will not use this method url links are open in new browser not in webview
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
                 return true;
@@ -110,7 +167,7 @@ public class WebViewActivity extends ActionBarActivity {
             public void onLoadResource (WebView view, String url) {
                 if (progressDialog == null) {
                     // in standard case YourActivity.this
-                    progressDialog = new ProgressDialog(WebViewActivity.this);
+                    progressDialog = new ProgressDialog(CheckinActivity.this);
                     progressDialog.setMessage("Loading...");
                     progressDialog.show();
                 }
@@ -126,56 +183,5 @@ public class WebViewActivity extends ActionBarActivity {
                 }
             }
         });
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        // TODO Auto-generated method stub
-        if (requestCode == FILECHOOSER_RESULTCODE) {
-
-            if (null == this.mUploadMessage) {
-                return;
-            }
-
-            Uri result = null;
-
-            try {
-                if (resultCode != RESULT_OK) {
-
-                    result = null;
-
-                } else {
-                    // retrieve from the private variable if the intent is null
-                    result = intent == null ? mCapturedImageURI : intent.getData();
-                }
-            } catch (Exception e) {
-                Toast.makeText(getApplicationContext(), "activity :" + e, Toast.LENGTH_LONG).show();
-            }
-
-            mUploadMessage.onReceiveValue(result);
-            mUploadMessage = null;
-        }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_web_view, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

@@ -11,7 +11,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -40,12 +39,7 @@ public class MainActivity extends ActionBarActivity {
         startActivity(intent);
     }
 
-    public void takePicture(View view) {
-        Intent intent = new Intent(this, CameraActivity.class);
-        startActivity(intent);
-    }
-
-  /*  public void fbLogin(View view) {
+    /*  public void fbLogin(View view) {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }*/
@@ -57,7 +51,7 @@ public class MainActivity extends ActionBarActivity {
 
 
     public void browseWeb(View view) {
-        Intent intent = new Intent(this, WebViewActivity.class);
+        Intent intent = new Intent(this, CheckinActivity.class);
         // String message = "http://140.113.122.162:3000/";
         // intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
