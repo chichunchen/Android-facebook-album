@@ -58,8 +58,8 @@ public class MainActivity extends ActionBarActivity {
 
     public void browseWeb(View view) {
         Intent intent = new Intent(this, WebViewActivity.class);
-        String message = "http://140.113.122.162:3000/";
-        intent.putExtra(EXTRA_MESSAGE, message);
+        // String message = "http://140.113.122.162:3000/";
+        // intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
 
