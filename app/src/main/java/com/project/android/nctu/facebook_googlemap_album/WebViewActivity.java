@@ -1,6 +1,7 @@
 package com.project.android.nctu.facebook_googlemap_album;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -12,7 +13,7 @@ import android.webkit.WebViewClient;
 public class WebViewActivity extends ActionBarActivity {
 
     private WebView webView;
-    private static String url = "http://140.113.122.162:3000";
+    private String url;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +22,14 @@ public class WebViewActivity extends ActionBarActivity {
 
         webView = (WebView) findViewById(R.id.webView1);
         webView.getSettings().setJavaScriptEnabled(true);
-        // webView.loadUrl("http://www.facebook.com");
 
+        getUrl();
         startWebView(url);
+    }
+
+    private void getUrl() {
+        Intent intent = getIntent();
+        url = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);;
     }
 
     private void startWebView(String url) {
