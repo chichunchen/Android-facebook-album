@@ -43,13 +43,9 @@ public class MapActivity extends Activity implements OnMapReadyCallback {
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         gpsInfo = new GpsInfo(locationManager);
 
-        // test
-        Intent intent = getIntent();
-        query = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-
-        Context context = getApplicationContext();
-        Toast toast = Toast.makeText(context, query + "lat: " + gpsInfo.lat + "/ lon: " + gpsInfo.lon, Toast.LENGTH_SHORT);
-        toast.show();
+//        Context context = getApplicationContext();
+//        Toast toast = Toast.makeText(context, query + "lat: " + gpsInfo.lat + "/ lon: " + gpsInfo.lon, Toast.LENGTH_SHORT);
+//        toast.show();
 
         // map
         MapFragment mapFragment = (MapFragment) getFragmentManager()

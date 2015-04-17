@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
-
-    <EditText android:id="@+id/search_map"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/map_search" />
-
-    <Button
-        android:id="@+id/map_btn"
-        android:text="@string/map_search_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="viewMap" />
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" >
 
     <Button
         android:id="@+id/web_btn"
         android:text="@string/browse"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="browseWeb" />
 
+    <Button
+        android:id="@+id/map_btn"
+        android:text="@string/map_search_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="viewMap" />
+
 </LinearLayout>
+

@@ -33,9 +33,6 @@ public class MainActivity extends ActionBarActivity {
 
     public void viewMap(View view) {
         Intent intent = new Intent(this, MapActivity.class);
-        EditText searchMap = (EditText)findViewById(R.id.search_map);
-        String message = searchMap.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
 
@@ -43,11 +40,10 @@ public class MainActivity extends ActionBarActivity {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }*/
-  @Override
-  public void onSaveInstanceState(Bundle outState) {
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
       super.onSaveInstanceState(outState);
   }
-
 
 
     public void browseWeb(View view) {
