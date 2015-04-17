@@ -81,7 +81,7 @@ public class CheckinActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_web_view, menu);
+        getMenuInflater().inflate(R.menu.menu_checkin_view, menu);
         return true;
     }
 
@@ -93,8 +93,10 @@ public class CheckinActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.refresh) {
+            Intent refresh = new Intent(this, CheckinActivity.class);
+            startActivity(refresh);
+            this.finish(); //
         }
 
         return super.onOptionsItemSelected(item);
