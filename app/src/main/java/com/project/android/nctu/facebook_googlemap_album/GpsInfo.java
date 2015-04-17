@@ -3,6 +3,7 @@ package com.project.android.nctu.facebook_googlemap_album;
 /**
  * Created by chichunchen on 4/17/15.
  */
+
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
