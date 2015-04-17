@@ -38,6 +38,11 @@ public class MainActivity extends ActionBarActivity {
         startActivity(intent);
     }
 
+    public void browseWeb(View view) {
+        Intent intent = new Intent(this, WebViewActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();

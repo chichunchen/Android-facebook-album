@@ -11,4 +11,8 @@
     <string name="post_image">Post Image</string>
     <string name="album">拍照</string>
     <string name="share">分享</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="browse">Browse</string>
 </resources>
