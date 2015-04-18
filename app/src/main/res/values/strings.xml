@@ -6,9 +6,10 @@
     <string name="map_search_text">完整地圖</string>
     <string name="title_activity_maps">Map</string>
 
-    <string name="facebook_app_id">383271738525917</string>
+    <string name="facebook_app_id">1380851498880005</string>
     <string name="album">拍照</string>
     <string name="share">分享</string>
+    <string name="login">FB登入</string>
     <string name="title_activity_web_view">Map Album</string>
 
     <string name="action_simple_login">With Simple Login Button</string>
