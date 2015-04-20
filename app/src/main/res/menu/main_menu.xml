@@ -9,14 +9,5 @@
         android:title="@string/action_settings"
         app:showAsAction="never"/>
 
-    <item
-        android:id="@+id/action_simple_login"
-        android:title="@string/action_simple_login"
-        android:orderInCategory="101"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_custom_login"
-        android:title="@string/action_custom_login"
-        android:orderInCategory="102"
-        app:showAsAction="never" />
+
 </menu>

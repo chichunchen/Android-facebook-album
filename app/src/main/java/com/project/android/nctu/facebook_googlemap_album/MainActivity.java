@@ -100,8 +100,8 @@ public class MainActivity extends ActionBarActivity {
 */
 public class MainActivity extends ActionBarActivity {
 
-    CallbackManager callbackManager;
-    private AccessToken accessToken;
+  //  CallbackManager callbackManager;
+  //  private AccessToken accessToken;
 
     public static final int INDEX_SIMPLE_LOGIN = 0;
     public static final int INDEX_CUSTOM_LOGIN = 1;
@@ -117,9 +117,11 @@ public class MainActivity extends ActionBarActivity {
         FacebookSdk.sdkInitialize(getApplicationContext());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mFragmentManager = getSupportFragmentManager();
+        toggleFragment(INDEX_SIMPLE_LOGIN);
 
         //宣告callback Manager
-        callbackManager = CallbackManager.Factory.create();
+       /* callbackManager = CallbackManager.Factory.create();
 
         //找到button
         Button loginButton = (Button) findViewById(R.id.fb_login);
@@ -187,15 +189,15 @@ public class MainActivity extends ActionBarActivity {
         });
 
 
+     */
 
-        mFragmentManager = getSupportFragmentManager();
     }
-    @Override
+    /*  @Override
     protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        callbackManager.onActivityResult(requestCode, resultCode, data);
-    }
-
+         super.onActivityResult(requestCode, resultCode, data);
+         callbackManager.onActivityResult(requestCode, resultCode, data);
+     }
+ */
     @Override
     protected void onResume() {
         super.onResume();
@@ -243,24 +245,14 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+
         if (id == R.id.action_settings) {
             return true;
         }
 
-        if (id == R.id.action_simple_login) {
-            toggleFragment(INDEX_SIMPLE_LOGIN);
-            return true;
-        }
-        if (id == R.id.action_custom_login) {
-            toggleFragment(INDEX_CUSTOM_LOGIN);
-            return true;
-        }
         return super.onOptionsItemSelected(item);
     }
 
