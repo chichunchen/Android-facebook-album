@@ -37,7 +37,6 @@ public class FragmentSimpleLoginButton extends Fragment {
             AccessToken accessToken = loginResult.getAccessToken();
             Profile profile = Profile.getCurrentProfile();
             mTextDetails.setText(constructWelcomeMessage(profile));
-
         }
 
         @Override
