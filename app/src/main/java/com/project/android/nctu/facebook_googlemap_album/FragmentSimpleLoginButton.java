@@ -29,6 +29,7 @@ public class FragmentSimpleLoginButton extends Fragment {
     private CallbackManager mCallbackManager;
     private AccessTokenTracker mTokenTracker;
     private ProfileTracker mProfileTracker;
+
     private FacebookCallback<LoginResult> mFacebookCallback = new FacebookCallback<LoginResult>() {
         @Override
         public void onSuccess(LoginResult loginResult) {
@@ -38,7 +39,6 @@ public class FragmentSimpleLoginButton extends Fragment {
             mTextDetails.setText(constructWelcomeMessage(profile));
 
         }
-
 
         @Override
         public void onCancel() {

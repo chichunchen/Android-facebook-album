@@ -1,6 +1,7 @@
 package com.project.android.nctu.facebook_googlemap_album;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ public class CheckinActivity extends ActionBarActivity {
 
     private WebView webView;
     private String urlStart = "http://140.113.122.162:3000/";
+    public final static String EXTRA_MESSAGE = "com.project.android.nctu.facebook_googlemap_album.MESSAGE";
 
     //File chooser parameters
     private static final int FILECHOOSER_RESULTCODE = 2888;
@@ -96,7 +98,7 @@ public class CheckinActivity extends ActionBarActivity {
         if (id == R.id.refresh) {
             Intent refresh = new Intent(this, CheckinActivity.class);
             startActivity(refresh);
-            this.finish(); //
+            this.finish();
         }
 
         return super.onOptionsItemSelected(item);

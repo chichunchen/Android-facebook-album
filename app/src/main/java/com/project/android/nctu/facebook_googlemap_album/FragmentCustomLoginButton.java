@@ -39,7 +39,6 @@ public class FragmentCustomLoginButton extends Fragment {
 
         }
 
-
         @Override
         public void onCancel() {
             Log.d("VIVZ", "onCancel");

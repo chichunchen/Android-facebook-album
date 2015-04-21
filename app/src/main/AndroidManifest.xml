@@ -70,6 +70,9 @@
             android:name=".CheckinActivity"
             android:label="@string/title_activity_web_view" >
         </activity>
+
+        <activity android:name=".ViewMapActivity"
+            android:label="@string/title_activity_map_view"/>
     </application>
 
 </manifest>

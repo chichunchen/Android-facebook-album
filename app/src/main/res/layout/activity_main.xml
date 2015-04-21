@@ -20,6 +20,13 @@
         android:layout_height="wrap_content"
         android:onClick="viewMap" />
 
+    <Button
+        android:id="@+id/web_map_btn"
+        android:text="@string/view_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="viewWebMap" />
+
 
 </LinearLayout>
 
