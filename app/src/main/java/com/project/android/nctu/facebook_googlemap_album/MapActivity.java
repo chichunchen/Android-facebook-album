@@ -48,12 +48,10 @@ public class MapActivity extends FragmentActivity {
             Marker currentShown;
 
             public boolean onMarkerClick(Marker marker) {
-                if (marker.equals(currentShown)) {
-                    
-                    currentShown = null;
+                if (marker.isInfoWindowShown()) {
+                    marker.hideInfoWindow();
                 } else {
-
-                    currentShown = marker;
+                    marker.showInfoWindow();
                 }
                 return true;
             }
