@@ -1,6 +1,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fontawesome="http://schemas.android.com/apk/res-auto"
+
     tools:context="com.project.android.nctu.facebook_googlemap_album.CheckinActivity">
 
     <item android:id="@+id/action_settings"

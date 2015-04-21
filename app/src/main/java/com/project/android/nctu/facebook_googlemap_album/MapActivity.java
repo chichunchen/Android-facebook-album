@@ -44,6 +44,22 @@ public class MapActivity extends FragmentActivity {
         setContentView(R.layout.map_activity);
 
         setUpMapIfNeeded();
+
+        map.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+
+            Marker currentShown;
+
+            public boolean onMarkerClick(Marker marker) {
+                if (marker.equals(currentShown)) {
+                    
+                    currentShown = null;
+                } else {
+
+                    currentShown = marker;
+                }
+                return true;
+            }
+        });
     }
 
     @Override

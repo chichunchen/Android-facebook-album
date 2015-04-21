@@ -1,31 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:bootstrapthumbnail="http://schemas.android.com/apk/res-auto"
+    xmlns:fontawesometext="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:orientation="vertical" >
 
-    <Button
+    <com.beardedhen.androidbootstrap.BootstrapButton
         android:id="@+id/web_btn"
         android:text="@string/browse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="browseWeb" />
+        android:onClick="browseWeb"
+        bootstrapbutton:bb_icon_right="fa-file-image-o"
+        bootstrapbutton:bb_type="success"
+        />
 
-    <Button
-        android:id="@+id/map_btn"
+    <com.beardedhen.androidbootstrap.BootstrapButton
         android:text="@string/map_search_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="viewMap" />
+        android:onClick="viewMap"
+        bootstrapbutton:bb_icon_right="fa-map-marker"
+        />
 
-    <Button
-        android:id="@+id/web_map_btn"
-        android:text="@string/view_map"
-        android:layout_width="match_parent"
+    <!-- Square Thumbnail with Image -->
+    <com.beardedhen.androidbootstrap.BootstrapThumbnail
+        android:id="@+id/thumbnailTwo"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="viewWebMap" />
+        bootstrapthumbnail:bt_width="350dp"
+        bootstrapthumbnail:bt_height="200dp"
+        bootstrapthumbnail:bt_image="@drawable/map_picture"/>
 
 
 </LinearLayout>
