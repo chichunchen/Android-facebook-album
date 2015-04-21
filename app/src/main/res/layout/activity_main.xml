@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:onClick="viewMap"
         bootstrapbutton:bb_icon_right="fa-map-marker"
+        bootstrapbutton:bb_type="default"
         />
 
     <!-- Square Thumbnail with Image -->
@@ -32,9 +33,19 @@
         android:id="@+id/thumbnailTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         bootstrapthumbnail:bt_width="350dp"
         bootstrapthumbnail:bt_height="200dp"
         bootstrapthumbnail:bt_image="@drawable/map_picture"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:text="@string/contact_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="contactUs"
+        bootstrapbutton:bb_icon_right="fa-comments"
+        bootstrapbutton:bb_type="info"
+        />
 
 
 </LinearLayout>

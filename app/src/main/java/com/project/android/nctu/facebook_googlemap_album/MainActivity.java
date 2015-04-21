@@ -1,6 +1,7 @@
 package com.project.android.nctu.facebook_googlemap_album;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -67,6 +68,19 @@ public class MainActivity extends ActionBarActivity {
     public void viewWebMap(View view) {
         Intent intent = new Intent(this, ViewMapActivity.class);
         startActivity(intent);
+    }
+
+    public void contactUs(View view) {
+        String address = getString(R.string.email_address);
+        String subject = getString(R.string.subject);
+        String body = getString(R.string.body);
+
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO,
+                Uri.parse("mailto:" + Uri.encode(address)));
+
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        emailIntent.putExtra(Intent.EXTRA_TEXT, body);
+        startActivity(Intent.createChooser(emailIntent, "Send email via..."));
     }
 
     @Override

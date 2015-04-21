@@ -128,7 +128,7 @@ public class CheckinActivity extends ActionBarActivity {
                     i.addCategory(Intent.CATEGORY_OPENABLE);
                     i.setType("image/*");
 
-                    Intent chooserIntent = Intent.createChooser(i, "Image Chooser");
+                    Intent chooserIntent = Intent.createChooser(i, getString(R.string.choose_image_source));
                     chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, new Parcelable[]{cameraIntent});
 
                     startActivityForResult(chooserIntent, FILECHOOSER_RESULTCODE);
