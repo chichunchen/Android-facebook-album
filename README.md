@@ -6,6 +6,7 @@ Check-in anytime anywhere. If you want to learn any detail, check our [keynote](
 - UI using [bootstrap](https://github.com/AndroidBootstrap/android-bootstrap)
 
 ## Demo
+<img src="./image/show.png" alt="show" width="300">
 <img src="./image/choose-photo.png" alt="f" width="300" >
 <img src="./image/demo.png" alt="demo" width="300">
 <img src="./image/nearby.png" alt="nearby" width="300">
