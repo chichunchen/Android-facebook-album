@@ -1,5 +1,5 @@
 # Instacheck-in
-Check-in anytime anywhere. If you want to learn any detail, check our [keynote](./keynote/index.html).
+Check-in anytime anywhere. If you want to learn any detail, check our [keynote](https://chichunchen.github.io/Instacheck-in/keynote/assets/player/KeynoteDHTMLPlayer.html).
 
 ## Feature
 - Integrate Google map service with facebook
